@@ -32,3 +32,20 @@ The following options will be available. Note that if multiple options are prese
   - If –duplname option is given, additionally, the following information will be printed: the total number of files with unique names.
 - -nofilelist
   - No file listing will be printed
+  
+# Getting Started
+First make executable:
+```
+chmod a+x filelist.py
+```
+Then usage:
+```
+./filelist.py [options] [directory list]
+```
+
+# Implementation Details
+- If the program doesn’t have read access for given any of the directories, the program prints an error message, then the program is stopped.
+- In the -before and -after options, I assumed that times are exclusive.
+- If the given arguments are in the wrong format (such as time is in the wrong format), the program prints an error message.
+- If both -duplname and -duplcont options are given, the program will print an error message.
+
